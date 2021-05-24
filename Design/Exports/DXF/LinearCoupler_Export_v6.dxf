@@ -1,0 +1,1866 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1009
+999
+L-Edit DXF writer Version 2016.2
+  9
+$PLINEWID
+ 40
+10.000000
+  9
+$EXTMIN
+ 10
+-3.375000
+ 20
+9.075000
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+101.092000
+ 20
+39.075000
+ 30
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+LTYPE
+ 70
+       1
+  0
+LTYPE
+  2
+CONTINUOUS
+ 70
+      64
+  3
+CONTINUOUS
+ 72
+      65
+ 73
+       0
+ 40
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+ 70
+       3
+  0
+LAYER
+  2
+0
+ 70
+      64
+  6
+CONTINUOUS
+ 62
+       7
+  0
+LAYER
+  2
+Poly_FTE
+ 70
+       0
+  6
+CONTINUOUS
+ 62
+       7
+  0
+LAYER
+  2
+Poly_PTE
+ 70
+       0
+  6
+CONTINUOUS
+ 62
+       7
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  2
+CouplerInlet
+  3
+CouplerInlet
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-33.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+49.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-33.954000
+ 20
+49.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_PTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-33.954000
+ 20
+47.721000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-3.954000
+ 20
+48.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-3.954000
+ 20
+47.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-33.954000
+ 20
+47.571000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_PTE
+  0
+ENDBLK
+  0
+BLOCK
+  2
+AnchoredCouplerInlet_woCo61857
+  3
+AnchoredCouplerInlet_woCo61857
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+16.500000
+ 20
+9.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+17.500000
+ 20
+9.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+17.500000
+ 20
+22.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+16.500000
+ 20
+22.075000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+16.500000
+ 20
+26.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+17.500000
+ 20
+26.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+17.500000
+ 20
+39.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+16.500000
+ 20
+39.075000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+45.500000
+ 20
+9.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+46.500000
+ 20
+9.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+46.500000
+ 20
+22.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+45.500000
+ 20
+22.075000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+45.500000
+ 20
+26.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+46.500000
+ 20
+26.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+46.500000
+ 20
+39.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+45.500000
+ 20
+39.075000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+INSERT
+  8
+0
+  2
+CouplerInlet
+ 10
+50.454000
+ 20
+-23.571000
+ 30
+0.0
+  0
+ENDBLK
+  0
+BLOCK
+  2
+Comb_L4W1_G500_D500_Stopp82907
+  3
+Comb_L4W1_G500_D500_Stopp82907
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+19.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+44.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+44.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+19.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+19.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+20.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+20.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+19.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+22.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+23.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+23.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+22.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+25.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+26.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+26.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+25.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+28.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+29.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+29.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+28.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+31.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+32.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+32.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+31.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+34.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+35.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+35.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+34.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+37.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+38.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+38.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+37.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+40.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+41.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+41.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+40.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+43.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+44.000000
+ 20
+19.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+44.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+43.000000
+ 20
+23.825000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+31.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+32.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+32.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+31.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+28.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+29.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+29.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+28.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+25.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+26.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+26.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+25.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+22.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+23.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+23.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+22.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+19.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+20.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+20.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+19.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+43.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+44.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+44.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+43.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+40.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+41.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+41.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+40.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+37.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+38.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+38.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+37.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+34.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+35.000000
+ 20
+19.075000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+35.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+34.000000
+ 20
+20.375000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+ENDBLK
+  0
+BLOCK
+  2
+Actuator_StoppersCenter_Export
+  3
+Actuator_StoppersCenter_Export
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+INSERT
+  8
+0
+  2
+AnchoredCouplerInlet_woCo61857
+ 10
+45.412000
+ 20
+-2.987000
+ 30
+0.0
+  0
+INSERT
+  8
+0
+  2
+Comb_L4W1_G500_D500_Stopp82907
+ 10
+108.412000
+ 20
+38.163000
+ 30
+0.0
+ 50
+180.000000
+  0
+INSERT
+  8
+0
+  2
+Comb_L4W1_G500_D500_Stopp82907
+ 10
+45.412000
+ 20
+4.013000
+ 30
+0.0
+  0
+ENDBLK
+  0
+BLOCK
+  2
+CouplerBody
+  3
+CouplerBody
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+55.533000
+ 20
+22.054000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+100.000000
+ 20
+22.054000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+100.000000
+ 20
+26.054000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+55.533000
+ 20
+26.054000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_PTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+55.533000
+ 20
+23.554000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+100.000000
+ 20
+23.554000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+100.000000
+ 20
+24.554000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+55.533000
+ 20
+24.554000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_PTE
+  0
+ENDBLK
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+INSERT
+  8
+0
+  2
+Actuator_StoppersCenter_Export
+ 10
+-65.287000
+ 20
+2.987000
+ 30
+0.0
+  0
+INSERT
+  8
+0
+  2
+Actuator_StoppersCenter_Export
+ 10
+163.004000
+ 20
+45.163000
+ 30
+0.0
+ 50
+180.000000
+  0
+INSERT
+  8
+0
+  2
+CouplerBody
+ 10
+-28.908000
+ 20
+0.021000
+ 30
+0.0
+  0
+ENDSEC
+  0
+EOF

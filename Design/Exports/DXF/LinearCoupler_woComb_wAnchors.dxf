@@ -1,0 +1,1318 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1009
+999
+L-Edit DXF writer Version 2016.2
+  9
+$PLINEWID
+ 40
+10.000000
+  9
+$EXTMIN
+ 10
+-39.955000
+ 20
+15.147000
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+69.889000
+ 20
+54.147000
+ 30
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+LTYPE
+ 70
+       1
+  0
+LTYPE
+  2
+CONTINUOUS
+ 70
+      64
+  3
+CONTINUOUS
+ 72
+      65
+ 73
+       0
+ 40
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+ 70
+       5
+  0
+LAYER
+  2
+0
+ 70
+      64
+  6
+CONTINUOUS
+ 62
+       7
+  0
+LAYER
+  2
+Si_FTE
+ 70
+       0
+  6
+CONTINUOUS
+ 62
+       7
+  0
+LAYER
+  2
+Poly_FTE
+ 70
+       0
+  6
+CONTINUOUS
+ 62
+       7
+  0
+LAYER
+  2
+Poly_PTE
+ 70
+       0
+  6
+CONTINUOUS
+ 62
+       7
+  0
+LAYER
+  2
+Oxide_FTE_drawing
+ 70
+       0
+  6
+CONTINUOUS
+ 62
+       7
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  2
+CouplerInlet
+  3
+CouplerInlet
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-33.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+49.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-33.954000
+ 20
+49.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_PTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-33.954000
+ 20
+47.721000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-3.954000
+ 20
+48.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-3.954000
+ 20
+47.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+-33.954000
+ 20
+47.571000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_PTE
+  0
+ENDBLK
+  0
+BLOCK
+  2
+AnchorBeam_L13W1
+  3
+AnchorBeam_L13W1
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Si_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-35.954000
+ 20
+28.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-35.454000
+ 20
+28.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-35.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-31.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-31.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-35.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-35.454000
+ 20
+28.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-30.954000
+ 20
+28.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-30.954000
+ 20
+33.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-35.954000
+ 20
+33.146000
+ 30
+0.0
+  0
+SEQEND
+  8
+Si_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-35.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-31.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-31.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-35.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-33.954000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-32.954000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-32.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-33.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Oxide_FTE_drawing
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-34.954000
+ 20
+29.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-31.954000
+ 20
+29.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-31.954000
+ 20
+32.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-34.954000
+ 20
+32.146000
+ 30
+0.0
+  0
+SEQEND
+  8
+Oxide_FTE_drawing
+  0
+ENDBLK
+  0
+BLOCK
+  2
+AnchoredCouplerInlet_woComb
+  3
+AnchoredCouplerInlet_woComb
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Si_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-1.954000
+ 20
+62.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.454000
+ 20
+62.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.454000
+ 20
+67.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.954000
+ 20
+67.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.954000
+ 20
+62.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-1.954000
+ 20
+62.146000
+ 30
+0.0
+  0
+SEQEND
+  8
+Si_FTE
+  0
+POLYLINE
+  8
+Si_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.954000
+ 20
+28.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-2.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-1.954000
+ 20
+33.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Si_FTE
+ 10
+-6.954000
+ 20
+33.146000
+ 30
+0.0
+  0
+SEQEND
+  8
+Si_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-6.454000
+ 20
+62.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-2.454000
+ 20
+62.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-2.454000
+ 20
+66.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-6.454000
+ 20
+66.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-6.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-2.454000
+ 20
+28.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-2.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-6.454000
+ 20
+32.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-4.954000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+32.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-4.954000
+ 20
+45.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-4.954000
+ 20
+49.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+49.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-3.954000
+ 20
+62.646000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+-4.954000
+ 20
+62.646000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Oxide_FTE_drawing
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-5.954000
+ 20
+29.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-2.954000
+ 20
+29.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-2.954000
+ 20
+32.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-5.954000
+ 20
+32.146000
+ 30
+0.0
+  0
+SEQEND
+  8
+Oxide_FTE_drawing
+  0
+POLYLINE
+  8
+Oxide_FTE_drawing
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-5.954000
+ 20
+63.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-2.954000
+ 20
+63.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-2.954000
+ 20
+66.146000
+ 30
+0.0
+  0
+VERTEX
+  8
+Oxide_FTE_drawing
+ 10
+-5.954000
+ 20
+66.146000
+ 30
+0.0
+  0
+SEQEND
+  8
+Oxide_FTE_drawing
+  0
+INSERT
+  8
+0
+  2
+CouplerInlet
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+INSERT
+  8
+0
+  2
+AnchorBeam_L13W1
+ 10
+-66.908000
+ 20
+95.292000
+ 30
+0.0
+ 50
+180.000000
+  0
+INSERT
+  8
+0
+  2
+AnchorBeam_L13W1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+ENDBLK
+  0
+BLOCK
+  2
+CouplerBody
+  3
+CouplerBody
+  8
+0
+ 67
+       0
+ 70
+       0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+POLYLINE
+  8
+Poly_FTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+20.817000
+ 20
+22.054000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+66.661000
+ 20
+22.054000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+66.661000
+ 20
+26.054000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_FTE
+ 10
+20.817000
+ 20
+26.054000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_FTE
+  0
+POLYLINE
+  8
+Poly_PTE
+ 66
+       1
+ 70
+       1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+20.817000
+ 20
+23.554000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+66.661000
+ 20
+23.554000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+66.661000
+ 20
+24.554000
+ 30
+0.0
+  0
+VERTEX
+  8
+Poly_PTE
+ 10
+20.817000
+ 20
+24.554000
+ 30
+0.0
+  0
+SEQEND
+  8
+Poly_PTE
+  0
+ENDBLK
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+INSERT
+  8
+0
+  2
+AnchoredCouplerInlet_woComb
+ 10
+33.935000
+ 20
+-12.999000
+ 30
+0.0
+ 41
+-1.000000
+ 42
+1.000000
+  0
+INSERT
+  8
+0
+  2
+CouplerBody
+ 10
+-28.772000
+ 20
+10.593000
+ 30
+0.0
+  0
+INSERT
+  8
+0
+  2
+AnchoredCouplerInlet_woComb
+ 10
+-4.001000
+ 20
+-12.999000
+ 30
+0.0
+  0
+ENDSEC
+  0
+EOF
