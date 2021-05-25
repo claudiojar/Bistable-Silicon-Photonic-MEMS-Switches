@@ -177,8 +177,10 @@ curv2_1 = subs(curvature2, 1);
 curv3_1 = subs(curvature3, 1);
 
 sprintf('curvature1 must be 0 at t=0 : %.4g',curv1_0)
-sprintf('curvature1 at t=1 must equal curvature2 at t=0 : %.4g = %.4g ?',curv1_1,curv2_0)
-sprintf('curvature2 at t=1 must equal curvature3 at t=0 : %.4g = %.4g ?',curv2_1,curv3_0)
+sprintf('curvature1 at t=1 must equal curvature2 at t=0 : %.4g = %.4g?',...
+    curv1_1,curv2_0)
+sprintf('curvature2 at t=1 must equal curvature3 at t=0 : %.4g = %.4g?',...
+    curv2_1,curv3_0)
 sprintf('curvature3 must be 0 at t=1 : %.4g',curv3_1)
 
 
@@ -209,7 +211,8 @@ while any(y_minrad(:)<5) %5 in um
     %func_seg = cell(3,1); %3 is a magic number (3 function pieces)
 
     for i=1:1:3
-        [x_minrad(i), y_minrad(i)] = fminbnd(matlabFunction(curvature_radius{i}), 0, 1);
+        [x_minrad(i), y_minrad(i)] = ...
+            fminbnd(matlabFunction(curvature_radius{i}), 0, 1);
         disp(y_minrad(i))
     end
 
@@ -234,36 +237,46 @@ end
 %this is only for plotting !!!!
 syms t
 %second segment (t-1)
-bez2_X_plot = (1-(t-1))*((1-(t-1))*((1-(t-1))*Q.x(1)+(t-1)*Q.x(2))+(t-1)*((1-(t-1))*Q.x(2)+(t-1)*Q.x(3)))+...
-    (t-1)*((1-(t-1))*((1-(t-1))*Q.x(2)+(t-1)*Q.x(3))+(t-1)*((1-(t-1))*Q.x(3)+(t-1)*Q.x(4)));
+bez2_X_plot = (1-(t-1))*((1-(t-1))*((1-(t-1))*Q.x(1)+(t-1)*Q.x(2))+(t-1)*...
+    ((1-(t-1))*Q.x(2)+(t-1)*Q.x(3)))+(t-1)*((1-(t-1))*((1-(t-1))*...
+    Q.x(2)+(t-1)*Q.x(3))+(t-1)*((1-(t-1))*Q.x(3)+(t-1)*Q.x(4)));
 bez2_X_diff1_plot = diff(bez2_X_plot);
 bez2_X_diff2_plot = diff(bez2_X_plot,2);
 
-bez2_Y_plot = (1-(t-1))*((1-(t-1))*((1-(t-1))*Q.y(1)+(t-1)*Q.y(2))+(t-1)*((1-(t-1))*Q.y(2)+(t-1)*Q.y(3)))+...
-    (t-1)*((1-(t-1))*((1-(t-1))*Q.y(2)+(t-1)*Q.y(3))+(t-1)*((1-(t-1))*Q.y(3)+(t-1)*Q.y(4)));
+bez2_Y_plot = (1-(t-1))*((1-(t-1))*((1-(t-1))*Q.y(1)+(t-1)*Q.y(2))+(t-1)*...
+    ((1-(t-1))*Q.y(2)+(t-1)*Q.y(3)))+(t-1)*((1-(t-1))*((1-(t-1))*Q.y(2)+...
+    (t-1)*Q.y(3))+(t-1)*((1-(t-1))*Q.y(3)+(t-1)*Q.y(4)));
+
 bez2_Y_diff1_plot = diff(bez2_Y_plot);
 bez2_Y_diff2_plot = diff(bez2_Y_plot,2);
 
 %third segment (t-2)
-bez3_X_plot = (1-(t-2))*((1-(t-2))*((1-(t-2))*R.x(1)+(t-2)*R.x(2))+(t-2)*((1-(t-2))*R.x(2)+(t-2)*R.x(3)))+...
-    (t-2)*((1-(t-2))*((1-(t-2))*R.x(2)+(t-2)*R.x(3))+(t-2)*((1-(t-2))*R.x(3)+(t-2)*R.x(4)));
+bez3_X_plot = (1-(t-2))*((1-(t-2))*((1-(t-2))*R.x(1)+(t-2)*R.x(2))+(t-2)*...
+    ((1-(t-2))*R.x(2)+(t-2)*R.x(3)))+(t-2)*((1-(t-2))*((1-(t-2))*R.x(2)+...
+    (t-2)*R.x(3))+(t-2)*((1-(t-2))*R.x(3)+(t-2)*R.x(4)));
+
 bez3_X_diff1_plot = diff(bez3_X_plot);
 bez3_X_diff2_plot = diff(bez3_X_plot,2);
 
-bez3_Y_plot = (1-(t-2))*((1-(t-2))*((1-(t-2))*R.y(1)+(t-2)*R.y(2))+(t-2)*((1-(t-2))*R.y(2)+(t-2)*R.y(3)))+...
-    (t-2)*((1-(t-2))*((1-(t-2))*R.y(2)+(t-2)*R.y(3))+(t-2)*((1-(t-2))*R.y(3)+(t-2)*R.y(4)));
+bez3_Y_plot = (1-(t-2))*((1-(t-2))*((1-(t-2))*R.y(1)+(t-2)*R.y(2))+(t-2)*...
+    ((1-(t-2))*R.y(2)+(t-2)*R.y(3)))+(t-2)*((1-(t-2))*((1-(t-2))*R.y(2)+...
+    (t-2)*R.y(3))+(t-2)*((1-(t-2))*R.y(3)+(t-2)*R.y(4)));
+
 bez3_Y_diff1_plot = diff(bez3_Y_plot);
 bez3_Y_diff2_plot = diff(bez3_Y_plot,2);
 
 %curvature computation per segment for plotting
-curvature2_plot = (bez2_X_diff1_plot*bez2_Y_diff2_plot-bez2_X_diff2_plot*bez2_Y_diff1_plot)/...
-    ((bez2_X_diff1_plot)^2 + (bez2_Y_diff1_plot)^2)^(3/2);
-curvature3_plot = (bez3_X_diff1_plot*bez3_Y_diff2_plot-bez3_X_diff2_plot*bez3_Y_diff1_plot)/...
-    ((bez3_X_diff1_plot)^2 + (bez3_Y_diff1_plot)^2)^(3/2);
+curvature2_plot = (bez2_X_diff1_plot*bez2_Y_diff2_plot-bez2_X_diff2_plot*...
+    bez2_Y_diff1_plot)/((bez2_X_diff1_plot)^2 + ...
+    (bez2_Y_diff1_plot)^2)^(3/2);
+
+curvature3_plot = (bez3_X_diff1_plot*bez3_Y_diff2_plot-bez3_X_diff2_plot*...
+    bez3_Y_diff1_plot)/((bez3_X_diff1_plot)^2 + ... 
+    (bez3_Y_diff1_plot)^2)^(3/2);
 
 %scaling of symbolic curvature for plotting
 %disp(scale_factor)
-curvature1_plot = curvature1/scale_factor;%curvature1 can be plotted directly
+curvature1_plot = curvature1/scale_factor;%curvature1 can be plotted
 curvature2_plot = curvature2_plot/scale_factor;
 curvature3_plot = curvature3_plot/scale_factor;
 
@@ -271,63 +284,6 @@ curvature3_plot = curvature3_plot/scale_factor;
 curvature_radius1_plot = abs(1/curvature1_plot);
 curvature_radius2_plot = abs(1/curvature2_plot);
 curvature_radius3_plot = abs(1/curvature3_plot);
-
-%% Computation of lengths
-
-% Computation of total arc length of Bezier polygon
-% We will compute the arc length of each of the 3 segments separetly and
-% then add them together. We will use the SCALED value, naturally. 
-
-syms t
-%we are using the non-shifted curves and integrate from 0 to 1
-%the length is scaled by multiplying the curve by scale factor
-%t remians between 0 and 1
-
-%lengths in um !
-
-integrand_curve1 = scale_factor*sqrt((bez1_X_diff1)^2 + (bez1_Y_diff1)^2);
-integrand_curve2 = scale_factor*sqrt((bez2_X_diff1)^2 + (bez2_Y_diff1)^2);
-integrand_curve3 = scale_factor*sqrt((bez3_X_diff1)^2 + (bez3_Y_diff1)^2);
-
-L_1 = vpa(int(integrand_curve1, [0 1]));
-L_2 = vpa(int(integrand_curve2, [0 1]));
-L_3 = vpa(int(integrand_curve3, [0 1]));
-
-L_total = L_1+L_2+L_3;
-
-% finding the t values for which the radius is larger than 15 um
-% these values are found 
-t_curve1 = vpasolve(curvature_radius1_plot==15,t,[0 1]);
-t_curve2 = vpasolve(curvature_radius2_plot==15,t,[1 2]);
-t_curve3a = vpasolve(curvature_radius3_plot==15,t, 2.2); %first sol
-t_curve3b = vpasolve(curvature_radius3_plot==15,t, 2.7); %second sol
-
-%finding the ''straight'' length, since we're using the non-shifted curves
-%we need to correct the boundary values 
-L_straight1 = vpa(int(integrand_curve1, [0 t_curve1]));
-L_straight2 = vpa(int(integrand_curve2, [(t_curve2-1) 1]));
-L_straight3 = vpa(int(integrand_curve3, [0 (t_curve3a-2)]));
-L_straight4 = vpa(int(integrand_curve3, [(t_curve3b-2) 1]));
-
-L_straight = L_straight4+L_straight3+L_straight2+L_straight1;
-
-%finding the bend length at r=5
-L_bend_5 = vpa(int(integrand_curve1, [t_curve1 1])) + ...
-    vpa(int(integrand_curve2, [0 t_curve2-1]));
-
-%finding the bend length at r=8
-L_bend_8 = vpa(int(integrand_curve3, [t_curve3a-2 t_curve3b-2]));
-
-
-%% Computation of losses
-% we will use certain values found in literature 
-
-prop_loss = 1.6; %[dB/cm], from Dr. Furci's research
-loss_R5 = 4e-1; %[dB/90deg bend] at 5 um, from literature
-loss_R8 = 7e-2; %[dB/90deg bend] at 8 um, from literature
-low_loss_crossing =  0.011; %low loss crossing losses
-
-total_loss = (L_straight/10000)*prop_loss + loss_R5*0.5 + loss_R8 + low_loss_crossing
 
 
 %% Bezier function plot
@@ -402,36 +358,116 @@ grid on;
 % Written by Dr. Furci, modified by C. Jaramillo on the 07.04.2021
 % use of wraith toolbox to generate GDSII file
 
-write_dir = ['C:\Users\claud\Google Drive\EPFL\2. Master\MA2 - 2021\'...
-    'MICRO-498 Semester Project\Design\Exports'];
+create_file = questdlg('Create GDSII file ?');
 
-%figure();
-%layer 1
-LayerStruct.layers(1)=1;
-%1 corresponds to the GDSII layer number
-LayerStruct.widths(1)=0.6; %in um
+if (strcmp(create_file,'Yes'))
 
-%layer 2
-LayerStruct.layers(2)=3; %adding other layers
-%3 corresponds to the GDSII layer number
-LayerStruct.widths(2)=1.8; %adding other layers
+    write_dir=['C:\Users\claud\Google Drive\EPFL\2. Master\MA2 - 2021\'...
+        'MICRO-498 Semester Project\Design\Exports'];
 
-StructCode='BezierBottomWaveguide180_0p6';
-BendLib=Raith_library('BezierCurve');
+    %figure();
+    %layer 1
+    LayerStruct.layers(1)=1;
+    %1 corresponds to the GDSII layer number
+    LayerStruct.widths(1)=0.6; %in um
 
-x = scale_factor*[bez_curve1_x bez_curve2_x bez_curve3_x];
-y = scale_factor*[bez_curve1_y bez_curve2_y bez_curve3_y];
+    %layer 2
+    LayerStruct.layers(2)=3; %adding other layers
+    %3 corresponds to the GDSII layer number
+    LayerStruct.widths(2)=1.8; %adding other layers
 
-path = [x;y];
+    StructCode='BezierBottomWaveguide180_0p6';
+    BendLib=Raith_library('BezierCurve');
 
-for e=1:numel(LayerStruct.layers)
-    layer=LayerStruct.layers(e);
-    width=LayerStruct.widths(e); 
-    BendVector(e)=Raith_element('path',layer,path,width,layer/8*1.5);
+    x = scale_factor*[bez_curve1_x bez_curve2_x bez_curve3_x];
+    y = scale_factor*[bez_curve1_y bez_curve2_y bez_curve3_y];
+
+    path = [x;y];
+
+    for e=1:numel(LayerStruct.layers)
+        layer=LayerStruct.layers(e);
+        width=LayerStruct.widths(e); 
+        BendVector(e)=Raith_element('path',layer,path,width,layer/8*1.5);
+    end
+
+    StrName=[StructCode sprintf('BezierCurve')];
+    BendStruct=Raith_structure(StrName,BendVector);
+    BendLib.append(BendStruct);
+    BendLib.writegds(write_dir,'plain');
 end
 
-StrName=[StructCode sprintf('BezierCurve')];
-BendStruct=Raith_structure(StrName,BendVector);
-BendLib.append(BendStruct);
-BendLib.writegds(write_dir,'plain');
+close all;
 
+%% Computation of lengths
+
+% Computation of total arc length of Bezier polygon
+% We will compute the arc length of each of the 3 segments separetly and
+% then add them together. We will use the SCALED value, naturally. 
+
+syms t
+%we are using the non-shifted curves and integrate from 0 to 1
+%the length is scaled by multiplying the curve by scale factor
+%t remians between 0 and 1
+
+%lengths in um !
+
+integrand_curve1 = scale_factor*sqrt((bez1_X_diff1)^2 + (bez1_Y_diff1)^2);
+integrand_curve2 = scale_factor*sqrt((bez2_X_diff1)^2 + (bez2_Y_diff1)^2);
+integrand_curve3 = scale_factor*sqrt((bez3_X_diff1)^2 + (bez3_Y_diff1)^2);
+
+L_1 = vpa(int(integrand_curve1, [0 1]));
+L_2 = vpa(int(integrand_curve2, [0 1]));
+L_3 = vpa(int(integrand_curve3, [0 1]));
+
+L_total = L_1+L_2+L_3;
+
+min_len_prop = 12;
+
+% finding the t values for which the radius is larger than 12 um
+% the value for 12 um is found in literature
+t_curve1 = vpasolve(curvature_radius1_plot==min_len_prop,t,[0 1]);
+t_curve2 = vpasolve(curvature_radius2_plot==min_len_prop,t,[1 2]);
+t_curve3a = vpasolve(curvature_radius3_plot==min_len_prop,t, 2.2); %first sol
+t_curve3b = vpasolve(curvature_radius3_plot==min_len_prop,t, 2.7); %second sol
+
+%finding the ''straight'' length, since we're using the non-shifted curves
+%we need to correct the boundary values 
+L_straight1 = vpa(int(integrand_curve1, [0 t_curve1]));
+L_straight2 = vpa(int(integrand_curve2, [(t_curve2-1) 1]));
+L_straight3 = vpa(int(integrand_curve3, [0 (t_curve3a-2)]));
+L_straight4 = vpa(int(integrand_curve3, [(t_curve3b-2) 1]));
+
+L_straight = L_straight4+L_straight3+L_straight2+L_straight1;
+
+%finding the bend length at r=5
+L_bend_5 = vpa(int(integrand_curve1, [t_curve1 1])) + ...
+    vpa(int(integrand_curve2, [0 t_curve2-1]));
+
+%finding the bend length at r=8
+L_bend_8 = vpa(int(integrand_curve3, [t_curve3a-2 t_curve3b-2]));
+
+
+%% Computation of losses
+% we will use certain values found in literature 
+
+param.prop_loss = 1.6; %[dB/cm], from Dr. Furci's research
+
+%all values for strip waveguides, form literature
+param.loss.R5 = 2e-2; %[dB/90deg bend] at 5 um, from literature
+param.loss.R8 = 9e-3; %[dB/90deg bend] at 8 um, from literature
+param.loss.R10 = 8e-3;
+param.loss.R15 = 9e-3; %[dB/90deg bend] at 15 um, from literature
+
+param.low_loss_crossing =  0.011; %low loss crossing loss, from research
+
+for i=0:15:180
+   param.scale_factor.(sprintf('angle_%d', i)) = i/90 ; 
+end
+
+
+total_loss = (L_straight/10000)*param.prop_loss +...
+    param.loss.R5*param.scale_factor.angle_135 +...
+    param.loss.R8*param.scale_factor.angle_90 + ...
+    param.low_loss_crossing;
+
+disp(total_loss)

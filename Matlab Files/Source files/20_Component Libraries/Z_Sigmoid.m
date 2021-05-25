@@ -22,7 +22,7 @@ length_coupler = 23; %half length, multiply by 2 for real length
 
 
 step_counter = 1;
-nb_of_points = 100;
+nb_of_points = 1000;
 
 
 %% Point wise sigmoid function for data extraction
@@ -57,13 +57,13 @@ while any(curvature_radius_y(:)<5)
         
         curvature_radius_y(i) = 1/curvature_y(i);
     end
-    myMin = min(curvature_radius_y(:))
+    myMin = min(curvature_radius_y(:));
     
     b=b-0.001;
     
 end
 
-disp(b);
+%disp(b);
 
 %% Sigmoid func plot
 figure_sigmoid = figure();
@@ -89,6 +89,7 @@ title('Curvature radius of sigmoid function')
 xlabel('Signed coupler length [um]')
 ylabel('Curvature radius [0,20] [um]')
 ylim([0 20]);
+xlim([-length_coupler length_coupler]);
 set(gca,'FontSize',12)
 grid on;
 
@@ -96,43 +97,111 @@ grid on;
 %% Creating the GDSII file
 %use of wraith toolbox to generate GDSII file
 
-write_dir = ['C:\Users\claud\Google Drive\EPFL\2. Master\MA2 - 2021\'...
-    'MICRO-498 Semester Project\Design\Exports\GDS'];
 
-%figure();
-%layer 1
-LayerStruct.layers(1)=1;
-%1 corresponds to the GDSII layer number
-LayerStruct.widths(1)=w_coupler; %in um
+create_file = questdlg('Create GDSII file ?');
 
-% %layer 2
-% LayerStruct.layers(2)=3; %adding other layers
-% %3 corresponds to the GDSII layer number
-% LayerStruct.widths(2)=2*w_etch; %adding other layers
+if (strcmp(create_file,'Yes'))
 
-StructCode='SigmoidCoupler';
-BendLib=Raith_library('SigmoidCoupler');
+    write_dir = ['C:\Users\claud\Google Drive\EPFL\2. Master\MA2 - 2021\'...
+        'MICRO-498 Semester Project\Design\Exports\GDS'];
 
-x = x_space;
-y = sigmoid_y;
+    %figure();
+    %layer 1
+    LayerStruct.layers(1)=1;
+    %1 corresponds to the GDSII layer number
+    LayerStruct.widths(1)=w_coupler; %in um
 
-path = [x;y];
+    % %layer 2
+    % LayerStruct.layers(2)=3; %adding other layers
+    % %3 corresponds to the GDSII layer number
+    % LayerStruct.widths(2)=2*w_etch; %adding other layers
 
-for e=1:numel(LayerStruct.layers)
-    layer=LayerStruct.layers(e);
-    width=LayerStruct.widths(e); 
-    BendVector(e)=Raith_element('path',layer,path,width,layer/8*1.5);
+    StructCode='SigmoidCoupler';
+    BendLib=Raith_library('SigmoidCoupler');
+
+    x = x_space;
+    y = sigmoid_y;
+
+    path = [x;y];
+
+    for e=1:numel(LayerStruct.layers)
+        layer=LayerStruct.layers(e);
+        width=LayerStruct.widths(e); 
+        BendVector(e)=Raith_element('path',layer,path,width,layer/8*1.5);
+    end
+
+    StrName=[StructCode sprintf('SigmoidCoupler_v4_suspended')];
+    BendStruct=Raith_structure(StrName,BendVector);
+    BendLib.append(BendStruct);
+
+    if (isfile(write_dir))
+        BendLib.writegds(write_dir,'plain');
+    else
+        BendLib.writegds('plain');
+    end
 end
 
-StrName=[StructCode sprintf('SigmoidCoupler_v4_suspended')];
-BendStruct=Raith_structure(StrName,BendVector);
-BendLib.append(BendStruct);
 
-if (isfile(write_dir))
-    BendLib.writegds(write_dir,'plain');
-else
-    BendLib.writegds('plain');
+%% Optical losses computation
+integrand = sqrt(1+(sigmoid_diff_y).^2);
+
+Length.Total = trapz(x_space,integrand);
+
+min_radius = 12;
+
+% the value for 12 um is found in literature
+epsilon_ = 1;
+xlims = find(curvature_radius_y>12-epsilon_ &...
+    curvature_radius_y<12+epsilon_);
+step_ = 0.001;
+
+while (numel(xlims)>4)
+    epsilon_ = epsilon_- step_;
+    xlims = find(curvature_radius_y>12-epsilon_ &...
+    curvature_radius_y<12+epsilon_);
 end
+
+%computing the length considered as ''straight''
+x_space_straight1 = x_space(1, 1:xlims(1));
+x_space_straight2 = x_space(1, xlims(2):xlims(3));
+x_space_straight3 = x_space(1, xlims(4):end);
+
+Length.Straight = trapz(x_space(1, 1:xlims(1)),integrand(1, 1:xlims(1)))+...
+    trapz(x_space(1, xlims(2):xlims(3)),integrand(1, xlims(2):xlims(3)))+...
+    trapz(x_space(1, xlims(4):end),integrand(1, xlims(4):end));
+
+
+%% Computation of losses
+% we will use certain values found in literature 
+
+param.prop_loss = 1.6; %[dB/cm], from Dr. Furci's research
+
+%all values for strip waveguides, form literature
+param.loss.R5 = 2e-2; %[dB/90deg bend] at 5 um, from literature
+param.loss.R8 = 9e-3; %[dB/90deg bend] at 8 um, from literature
+param.loss.R10 = 8e-3;
+param.loss.R15 = 9e-3; %[dB/90deg bend] at 15 um, from literature
+
+param.low_loss_crossing =  0.011; %low loss crossing loss, from research
+
+for i=0:15:180
+   param.scale_factor.(sprintf('angle_%d', i)) = i/90 ; 
+end
+
+total_loss.coupler = (Length.Straight/10000)*param.prop_loss +...
+    2*param.loss.R5*param.scale_factor.angle_90;
+
+
+Length.Straight_BWG = 2*38.298;
+
+total_loss.BWG = (Length.Straight_BWG/10000)*param.prop_loss +...
+    4*param.loss.R5*param.scale_factor.angle_90 + ...
+    param.low_loss_crossing;
+
+disp(total_loss.coupler)
+disp(total_loss.BWG)
+
+close all;
 
 %% Functions
 
