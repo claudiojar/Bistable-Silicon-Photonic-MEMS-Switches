@@ -289,14 +289,15 @@ curvature_radius3_plot = abs(1/curvature3_plot);
 %% Bezier function plot
 %plot the symbolic bezier function
 f1 = figure;
+line_width=4;
 hold on;
 
 %we didn't change the variable for bez1 so we can just use the original
-fplot(scale_factor*bez1_X, scale_factor*bez1_Y, [0 1])
+fplot(scale_factor*bez1_X, scale_factor*bez1_Y, [0 1], 'LineWidth',line_width)
 
-fplot(scale_factor*bez2_X_plot,scale_factor*bez2_Y_plot, [1 2])
+fplot(scale_factor*bez2_X_plot,scale_factor*bez2_Y_plot, [1 2], 'LineWidth',line_width)
 
-fplot(scale_factor*bez3_X_plot,scale_factor*bez3_Y_plot, [2 3])
+fplot(scale_factor*bez3_X_plot,scale_factor*bez3_Y_plot, [2 3], 'LineWidth',line_width)
 
 %creation of the diagonal asymptote
 % syms x;
@@ -311,6 +312,8 @@ title('Bézier Curve')
 ylabel('y')
 xlabel('x')
 %xline(1,':k');
+set(gca,'FontSize',12)
+
 grid on;
 
 
@@ -319,18 +322,22 @@ grid on;
 syms t;
 
 f2 = figure;
+line_width=4;
+
 hold on;
 %no change of variable for curvature 1, so we use the original
-fplot(curvature1_plot, [0 1])
+fplot(curvature1_plot, [0 1], 'LineWidth',line_width)
 
-fplot(curvature2_plot, [1 2])
+fplot(curvature2_plot, [1 2], 'LineWidth',line_width)
 
-fplot(curvature3_plot, [2 3])
+fplot(curvature3_plot, [2 3], 'LineWidth',line_width)
 hold off;
 %params
 title('Curvature')
 xlabel('Arc length')
 ylabel('Signed curvature')
+set(gca,'FontSize',12)
+
 grid on;
 
 
@@ -338,19 +345,24 @@ grid on;
 %plot the symbolic curvature
 syms t;
 f3 = figure;
+line_width=4;
+
 hold on;
-fplot(curvature_radius1_plot, [0 1])
+fplot(curvature_radius1_plot, [0 1], 'LineWidth',line_width)
 
-fplot(curvature_radius2_plot, [1 2])
+fplot(curvature_radius2_plot, [1 2], 'LineWidth',line_width)
 
-fplot(curvature_radius3_plot, [2 3])
+fplot(curvature_radius3_plot, [2 3], 'LineWidth',line_width)
 hold off;
 
 %params
 title('Curvature radius')
 xlabel('Arc length [a.u.]')
 ylabel('Radius [um]')
+xlim([0 3])
 ylim([4 25])
+set(gca,'FontSize',12)
+
 grid on;
 
 

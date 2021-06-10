@@ -11,6 +11,8 @@ w_BWG_strip = 0.45; %um
 w_etch = 2; %um width of etching for the strip WG
 w_coupler = 1;
 
+line_width=4;
+
 offset_taper = ((w_etch+w_BWG_strip)/2); 
 
 a = 39.607 ; %height of sigmoid function 
@@ -68,7 +70,7 @@ end
 %% Sigmoid func plot
 figure_sigmoid = figure();
 
-plot(x_space,sigmoid_y)
+plot(x_space,sigmoid_y,'LineWidth',line_width)
 
 %params
 title('Sigmoid function describing the coupler')
@@ -82,7 +84,7 @@ grid on;
 %% Curvature radius func plot
 figure_sigmoid_curvature = figure();
 
-plot(x_space,(1./curvature_y));
+plot(x_space,(1./curvature_y),'LineWidth',line_width);
 
 %params
 title('Curvature radius of sigmoid function')
@@ -201,7 +203,7 @@ total_loss.BWG = (Length.Straight_BWG/10000)*param.prop_loss +...
 disp(total_loss.coupler)
 disp(total_loss.BWG)
 
-close all;
+%close all;
 
 %% Functions
 
