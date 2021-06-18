@@ -36,6 +36,7 @@ To run the path creation routines, make sure that the installation requirements 
 * ```...\Bistable-Silicon-Photonic-MEMS-Switches\Matlab Files\Source files\Other files``` contains file sused for computing certain characterisation aspects of the design, such as optical losses. 
 
 ## Help
+Please refer to the technical report in ```...\Bistable-Silicon-Photonic-MEMS-Switches\Deliverables\Report``` for more information and technical data on these designs.
 
 For any problem, issue or comment please email me at : 
 <claudio.jaramilloconcha@epfl.ch>
