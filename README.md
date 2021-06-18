@@ -48,7 +48,7 @@ For any problem, issue or comment please email me at :
 
 ## Version History
 
-* 0.2
+* 1.0
     * Clean up for public release
 * 0.1
     * Initial Release
