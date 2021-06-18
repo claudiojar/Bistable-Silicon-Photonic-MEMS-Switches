@@ -1,7 +1,7 @@
 # Bistable-Silicon-Photonic-MEMS-Switches
 
 ## Abstract and scope of the project
-Photonics, and photonic integrated systems are devices that use electromagnetic waves (light) as a communication medium. Photonic integrated circuits provide functions such as amplification, routing, modulation, for signals carrying information, and typically operate at optical wavelengths in the near visible spectrum or near infrared : $850 \ nm - 1650 \ nm$.
+Photonics, and photonic integrated systems are devices that use electromagnetic waves (light) as a communication medium. Photonic integrated circuits provide functions such as amplification, routing, modulation, for signals carrying information, and typically operate at optical wavelengths in the near visible spectrum or near infrared : 850 nm - 1650 nm.
 
 To that extent, optical switches are a crucial element of an optical system. An optical switch is a device that enables switching a given signal between different channels. These switches are usually characterized by the input/output port count, and were often fabricated using mirrors, or reflective coatings. 
 
@@ -9,7 +9,7 @@ However, it is becoming increasingly feasible to use micro-electromechanical sys
 
 By exploiting the mechanical properties of MEMS, we can create a system that exhibits buckling under compressive stress, and therefore creates 2 buckled stable states : we have created a non-volatile latching switch that requires power only to switch from ON to OFF (or vice-versa).
 
-The scope of the project is therefore to investigate different designs for optical MEMS switches, operating in the $[1460,\ 1580] \ nm$ range, and to draft the corresponding photonic chip layouts in an actual microfabrication design framework. We will attempt to optimize these MEMS switches' design based on certain optimization criteria that will be further explained later in this paper, and we will simulate the switches using finite element modeling techniques (FEM) to explore their buckling mode shapes. 
+The scope of the project is therefore to investigate different designs for optical MEMS switches, operating in the [1460, 1580] nm range, and to draft the corresponding photonic chip layouts in an actual microfabrication design framework. We will attempt to optimize these MEMS switches' design based on certain optimization criteria that will be further explained later in this paper, and we will simulate the switches using finite element modeling techniques (FEM) to explore their buckling mode shapes. 
 
 In this project we present 3 optimized optical MEMS switch architectures, their design philosophies and decisions, as well as their possible implementations in switch array grids for applications in data centers, telecommunication infrastructure or aerospace telecommunications.
 
