@@ -1,5 +1,7 @@
 # Bistable-Silicon-Photonic-MEMS-Switches
 
+*A certain amount of material such as design files, simulation files and results, files developed by other contributors, etc. were left out of this repository for copyright reasons.*
+
 ## Abstract and scope of the project
 Photonics, and photonic integrated systems are devices that use electromagnetic waves (light) as a communication medium. Photonic integrated circuits provide functions such as amplification, routing, modulation, for signals carrying information, and typically operate at optical wavelengths in the near visible spectrum or near infrared : 850 nm - 1650 nm.
 
