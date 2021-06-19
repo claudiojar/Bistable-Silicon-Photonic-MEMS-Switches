@@ -43,7 +43,7 @@ For any problem, issue or comment please email me at :
 
 
 ## Authors
-* Author : Claudio Jaramillo, BSc. Microengineering, EPFL 
+* Author : Claudio Jaramillo, MSc. Microengineering, EPFL 
   * email : <claudio.jaramilloconcha@epfl.ch>
   * LinkedIn : <https://www.linkedin.com/in/claudio-jaramillo>
 
